@@ -1,0 +1,77 @@
+﻿<Window x:Class="ServiceCenter.Windows.CreateDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceCenter.Windows"
+        mc:Ignorable="d"
+        Title="Создать деталь" Height="450" Width="500"
+        Background="#272537">
+    <Grid >
+        <StackPanel Width="150" Height="300" >
+            <Grid
+                Height="50">
+                <Label
+                    VerticalAlignment="Top" Foreground="White">
+                    Название:
+                </Label>
+                <TextBox 
+                    Background="#272537"
+                    Foreground="White"
+                     BorderBrush="#FF3C2459"
+                    TextAlignment="Center"
+                    x:Name="Name"
+                    VerticalAlignment="Bottom"
+                    Height="25" 
+                   
+                    />
+            </Grid>
+            <Label
+                Foreground="White">Техника:</Label>
+            <ComboBox
+                x:Name="Technique"
+                Background="#272537" 
+                
+                Margin="5" BorderBrush="#FF875B5B">
+                
+
+            </ComboBox>
+            <Grid Height="50">
+                <Label
+                    Foreground="White"
+                    VerticalAlignment="Top">
+                    Цена:
+                </Label>
+                <TextBox 
+                    x:Name="Price"
+                    Background="#272537"
+                    Foreground="White"
+                    VerticalAlignment="Bottom"
+                    Height="27"
+                    FontSize="20">
+                </TextBox>
+            </Grid>
+        </StackPanel>
+        <Grid 
+            Margin="50 , 15"
+            Width="150px" 
+            VerticalAlignment="Bottom"
+           HorizontalAlignment="Right">
+            <Button 
+                x:Name="Add"
+                HorizontalAlignment="Left"
+                Padding="3px"
+                BorderBrush="Green" Click="Add_Click">
+
+                Добавить
+            </Button>
+            <Button
+                x:Name="Cancel"
+                HorizontalAlignment="Right"
+                Padding="3px"
+                BorderBrush="Red" Click="Cancel_Click">
+                Отменить
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

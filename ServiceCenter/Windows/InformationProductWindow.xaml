@@ -1,0 +1,124 @@
+﻿<Window x:Class="ServiceCenter.Windows.InformationProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceCenter.Windows"
+        mc:Ignorable="d"
+        Title="InformationProductWindow"
+        Height="450"
+        Width="800"
+        Background="#272537"
+        >
+    <StackPanel Orientation="Horizontal">
+
+        <StackPanel
+            Margin="10"
+            Orientation="Vertical"
+            Width="330">
+            <Label x:Name="Name"
+                   Margin="10 5"
+                   HorizontalAlignment="Left"
+                   Foreground="White" 
+                   FontSize="16" 
+                   FontFamily="Yu Gothic UI Semibold">
+                Название:
+            </Label>
+            <Label 
+                Margin="10 5"
+                Width="300"
+                x:Name="Description" 
+                HorizontalAlignment="Left"
+                Foreground="White"
+                FontSize="16" 
+                FontFamily="Yu Gothic UI Semibold">
+                Описание:
+            </Label>
+            <Label 
+                Margin="10 5"
+                Width="300"  
+                x:Name="Category" 
+                HorizontalAlignment="Left"
+                Foreground="White"
+                FontSize="16" 
+                FontFamily="Yu Gothic UI Semibold">
+                Категория:
+            </Label>
+            <Label
+                Margin="10 5"
+                Width="300" 
+                x:Name="Price" 
+                HorizontalAlignment="Left"
+                Foreground="White"
+                FontSize="16" 
+                FontFamily="Yu Gothic UI Semibold">
+                Цена:
+            </Label>
+            <Label 
+                Width="300"  
+                x:Name="Amount" 
+                HorizontalAlignment="Left"
+                Foreground="White"
+                FontSize="16" 
+                FontFamily="Yu Gothic UI Semibold">
+                Количество:
+            </Label>
+           
+        </StackPanel>
+        <StackPanel
+            Margin="10"
+            Width="200"
+            Orientation="Vertical"
+            HorizontalAlignment="Right">
+            <Label
+                Foreground="White" 
+                   FontSize="16" 
+                   FontFamily="Yu Gothic UI Semibold">
+                Детали:
+            </Label>
+            <ListBox
+                Foreground="White" 
+                x:Name="ListDetails"
+                Background="#272537"
+                Height="350">
+
+            </ListBox>
+        </StackPanel>
+        <StackPanel 
+            Orientation="Vertical">
+            <Label
+                x:Name="Quantity"
+                Foreground="White" 
+                Margin="10 5"
+                FontSize="16" 
+                FontFamily="Yu Gothic UI Semibold">
+                Количество на скаде:
+            </Label>
+            <StackPanel 
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <Button 
+                    x:Name="Sell"
+                Padding="4"
+                Margin="10"
+                Width="60"
+                Background="#FF68A56B"
+                BorderThickness="1,1,1,0" 
+                Click="Sell_Click">
+                    Продать
+                </Button>
+                <Button 
+                x:Name="RepairBtn"
+                Padding="4"
+                Margin="10"
+                Width="60"
+                Background="#FFC9C145"
+                BorderThickness="1,1,1,0" Click="RepairBtn_Click" 
+                >
+                    Ремонт
+                </Button>
+            </StackPanel>
+            
+        </StackPanel>
+    </StackPanel>
+</Window>
